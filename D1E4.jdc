@@ -1,0 +1,16 @@
+String str = System.console().readLine();
+int i = Integer.parseInt(str);
+int counter = i-1;
+double computation = 0;
+while (counter > 1) {
+	computation = i % counter;
+	if (computation == 0) {
+		println("not prime number: can be divided by: " + counter);
+		break;
+		}
+	counter = counter - 1;
+}
+if (counter == 1)
+	println("This is a prime number");
+else
+	println("This is not a prime number");

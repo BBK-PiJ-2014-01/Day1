@@ -1,0 +1,19 @@
+int a = 0;
+int compare = 0;
+String message = "Yes";
+boolean first = true;
+while (a!=-1) {
+	String str = System.console().readLine();
+	a = Integer.parseInt(str);
+	if (first==true){
+		compare = a;
+		first = false;
+	} else {
+	if (a == compare + 1)
+		compare = a;
+	else
+		if (a!=-1)
+			message = "No";
+	}
+}
+println("Were the numbers consecutive: " + message);

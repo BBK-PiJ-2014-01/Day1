@@ -1,0 +1,81 @@
+// not finished!!!
+
+int countRank1 = 0;
+int countRank2 = 0;
+int countRank3 = 0;
+int countRank4 = 0;
+int countRank5 = 0;
+int countRank6 = 0;
+int countRank7 = 0;
+int countRank8 = 0;
+int countRank9 = 0;
+int countRank10 = 0;
+int countRankJ = 0;
+int countRankQ = 0;
+int countRankK = 0;
+boolean pair1Flag = false;
+boolean pair2Flag = false;
+boolean threeFlag = false;
+boolean fourFlag = false;
+boolean straightFlag = false;
+
+for (int i = 1; i<6 ; i++) {
+	print("First card - rank: ");
+	String rank = System.console().readLine();
+	// print("First card - suit: ");
+	// String suite = System.console().readLine();
+	switch(rank) {
+	case "1":
+		countRank1 = countRank1 + 1;
+		switch (countRank1) {
+		case 2:	
+			if (!pair1Flag)
+				pair1Flag = true;
+			else
+				pair2Flag = true;
+			break;
+		case 3: 
+			threeFlag = true;
+			break;
+		case 4:
+			fourFlag = true;
+			break;
+		case 5:
+			straightFlag = true;
+			break;
+		default: 
+			break;
+		}
+		break;
+	case "2":
+		countRank2 = countRank2 + 1;
+		switch (countRank2) {
+		case 2:	
+			if (!pair1Flag)
+				pair1Flag = true;
+			else
+				pair2Flag = true;
+			break;
+		case 3: 
+			threeFlag = true;
+			break;
+		case 4:
+			fourFlag = true;
+			break;
+		case 5:
+			straightFlag = true;
+			break;
+		default: 
+			break;
+		}
+		break;							
+	default:
+		break;
+	}
+}
+if (threeFlag)
+	println("Three of a kind");
+if (pair2Flag)
+	println("Two pairs");
+if ((threeFlag) && (pair1Flag))
+	println("Full house");

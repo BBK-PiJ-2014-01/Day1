@@ -1,0 +1,32 @@
+int input = 0;
+int base = 0;
+String message = "Yes";
+boolean first = true;
+String direction = "";
+boolean changeDirection = false;
+
+while (input != -1) {
+	input = readInt();
+	if (first==true){
+		base = input;
+		first = false;
+	} else
+	if (input == base + 1) {
+		base = input;
+		if (direction == "DOWN")
+			changeDirection = true;
+		direction = "UP";
+	} else
+	if (input == base - 1) {
+		base = input;
+		if (direction == "UP")
+			changeDirection = true;
+		direction = "DOWN";
+	} else
+	if (input != -1)
+		message = "No";
+}
+
+if (changeDirection)
+	message = "No";
+println("Were the numbers consecutive: " + message);

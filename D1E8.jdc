@@ -1,0 +1,9 @@
+int a = 0;
+int max = 0;
+while (a!=-1) {
+	String str = System.console().readLine();
+	a = Integer.parseInt(str);
+	if (a > max)
+		max = a;
+}
+println("The max number was: " + max);

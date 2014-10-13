@@ -1,0 +1,13 @@
+String str1 = System.console().readLine();
+int a = Integer.parseInt(str1);
+String str2 = System.console().readLine();
+int b = Integer.parseInt(str2);
+int quotient = 0;
+int remainder = a;
+int compute = 0;
+while (remainder > b) {
+	remainder = remainder - b;
+	if (remainder > 0)
+		quotient++;
+}
+println(a + " divided by " + b + " is " + quotient + ", remainder " + remainder);

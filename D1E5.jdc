@@ -1,0 +1,11 @@
+String str1 = System.console().readLine();
+int a = Integer.parseInt(str1);
+String str2 = System.console().readLine();
+int b = Integer.parseInt(str2);
+int counter = b;
+int multi = a;
+while (counter > 1) {
+	multi = multi + a;
+	counter = counter - 1;
+}
+println("multiplication = " + multi);
